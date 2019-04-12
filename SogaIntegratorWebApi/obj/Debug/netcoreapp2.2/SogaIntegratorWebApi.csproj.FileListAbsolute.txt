@@ -12,3 +12,17 @@
 /Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.RazorTargetAssemblyInfo.cache
 /Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.dll
 /Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.pdb
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\bin\Debug\netcoreapp2.2\SogaIntegratorWebApi.deps.json
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\bin\Debug\netcoreapp2.2\SogaIntegratorWebApi.runtimeconfig.json
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\bin\Debug\netcoreapp2.2\SogaIntegratorWebApi.runtimeconfig.dev.json
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\bin\Debug\netcoreapp2.2\SogaIntegratorWebApi.dll
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\bin\Debug\netcoreapp2.2\SogaIntegratorWebApi.pdb
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.csprojAssemblyReference.cache
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.csproj.CoreCompileInputs.cache
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.RazorAssemblyInfo.cache
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.RazorAssemblyInfo.cs
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.AssemblyInfoInputs.cache
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.AssemblyInfo.cs
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.RazorTargetAssemblyInfo.cache
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.dll
+C:\Users\jklebucki\source\repos\jklebucki\SogaIntegrator\SogaIntegratorWebApi\obj\Debug\netcoreapp2.2\SogaIntegratorWebApi.pdb

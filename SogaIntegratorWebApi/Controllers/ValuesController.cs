@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FirebirdSql.Data.FirebirdClient;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using SogaIntegratorWebApi.Models;
 
 namespace SogaIntegratorWebApi.Controllers
 {
@@ -27,7 +28,7 @@ namespace SogaIntegratorWebApi.Controllers
             "DataSource=192.168.45.68;" +
             "Port=3050;" +
             "Dialect=3;" +
-            "Charset=NONE;" +
+            "Charset=UTF8;" +
             "Role=;" +
             "Connection lifetime=15;" +
             "Pooling=false;"; //+
@@ -39,7 +40,7 @@ namespace SogaIntegratorWebApi.Controllers
             FbConnection myConnection1 = new FbConnection(connectionString);
             // FbConnection myConnection2 = new FbConnection(connectionString);
             // FbConnection myConnection3 = new FbConnection(connectionString);
-            List<IEnumerable<string>> list = new List<IEnumerable<string>>();
+            List<Dokument> list = new List<Dokument>();
             try
             {
                 myConnection1.Open();
@@ -47,32 +48,43 @@ namespace SogaIntegratorWebApi.Controllers
                 FbCommand myCommand = new FbCommand();
 
                 myCommand.CommandText =
-                "select * from dokumenty where DATA_WST between cast('" + from + "' as date) and cast('" + to + "' as date)";
+                "select * from dokumenty where DATA_WST between cast('" + from + "' as date) and cast('" + to + "' as date) and TYP_DOK='PZ'";
                 myCommand.Connection = myConnection1;
                 var reader = myCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    list.Add(new string[] {
-                        reader.GetValue(0).ToString(),
-                        reader.GetValue(1).ToString(),
-                        reader.GetValue(2).ToString(),
-                        reader.GetValue(3).ToString(),
-                        reader.GetValue(4).ToString(),
-                        reader.GetValue(5).ToString(),
-                        reader.GetName(6),
-                        reader.GetDateTime(6).ToString("yyyy-MM-dd"),
-                        reader.GetName(7),
-                        reader.GetDateTime(7).ToString("yyyy-MM-dd"),
-                        reader.GetName(8),
-                        reader.GetDateTime(8).ToString("yyyy-MM-dd"),
-                        reader.GetValue(9).ToString(),
-                        reader.GetValue(10).ToString(),
-                        reader.GetValue(11).ToString(),
-                        reader.GetValue(12).ToString(),
-                        reader.GetValue(13).ToString(),
-                        reader.GetValue(14).ToString(),
-                        reader.GetValue(15).ToString(),
-                        reader.GetValue(16).ToString()
+                    list.Add(new Dokument {
+                        ID_LOK = reader.GetInt32(0),
+                        ID_DOK = reader.GetInt32(1),
+                        TYP_DOK = reader.GetString(2),
+                        ID_KOR = reader.GetInt32(3),
+                        ID_FI = reader.GetInt32(4),
+                        ID_FI_2 = reader.GetInt32(5),
+                        DATA_WST = reader.GetDateTime(6),
+                        DATA_SPR = reader.GetDateTime(7),
+                        DATA_VAT = reader.GetDateTime(8),
+                        NR = reader.GetInt32(9),
+                        CALY_NR = reader.GetString(10),
+                        CENA_WST = reader.GetString(11),
+                        WART_NU = reader.GetDecimal(12),
+                        WART_BU = reader.GetDecimal(13),
+                        WART_VU = reader.GetDecimal(14),
+                        ODB = reader.GetString(15),
+                        ID_FO_DOZAP = reader.GetInt32(16),
+                        NR_ORYGIN = reader.GetString(17),
+                        STATUS = reader.GetString(18),
+                        EURO = reader.GetDecimal(19),
+                        PRZEDPLATA = reader.GetDecimal(20),
+                        DOZAP = reader.GetDecimal(21),
+                        UPUST_P = reader.GetDecimal(22),
+                        UPUST_KW = reader.GetDecimal(23),
+                        KOSZT = reader.GetDecimal(24)
+                        //reader.GetValue(25).ToString(),
+                        //reader.GetValue(26).ToString(),
+                        //reader.GetValue(27).ToString(),
+                        //reader.GetValue(28).ToString(),
+                        //reader.GetValue(29).ToString(),
+                        //reader.GetDateTime(30).ToString()
                     });
                 }
 
@@ -83,8 +95,11 @@ namespace SogaIntegratorWebApi.Controllers
             {
                 Console.WriteLine(e.Message);
             }
-            JsonSerializerSettings responseJson = new JsonSerializerSettings();
-            responseJson.Formatting = Formatting.Indented;
+            JsonSerializerSettings responseJson = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                DateFormatString = "yyyy-MM-dd HH:mm:ss"
+            };
             return new JsonResult(list, responseJson);
         }
 
