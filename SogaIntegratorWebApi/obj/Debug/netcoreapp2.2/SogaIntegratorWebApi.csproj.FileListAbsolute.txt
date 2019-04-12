@@ -1,0 +1,14 @@
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/bin/Debug/netcoreapp2.2/SogaIntegratorWebApi.deps.json
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/bin/Debug/netcoreapp2.2/SogaIntegratorWebApi.runtimeconfig.json
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/bin/Debug/netcoreapp2.2/SogaIntegratorWebApi.runtimeconfig.dev.json
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/bin/Debug/netcoreapp2.2/SogaIntegratorWebApi.dll
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/bin/Debug/netcoreapp2.2/SogaIntegratorWebApi.pdb
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.csprojAssemblyReference.cache
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.csproj.CoreCompileInputs.cache
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.RazorAssemblyInfo.cache
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.RazorAssemblyInfo.cs
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.AssemblyInfoInputs.cache
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.AssemblyInfo.cs
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.RazorTargetAssemblyInfo.cache
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.dll
+/Users/jklebucki/Projects/SogaIntegrator/SogaIntegratorWebApi/obj/Debug/netcoreapp2.2/SogaIntegratorWebApi.pdb
