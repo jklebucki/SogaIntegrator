@@ -40,7 +40,7 @@ namespace SogaIntegratorWebApi.Controllers
                 fbCommand.CommandText =
                 "select ID_LOK, ID_POZDOK, ID_DOK, NR_POZ, ID_POZDOK_KOR, ID_TW, ILOSC, WART_JN, WART_JB, ID_VAT, " +
                 "VAT_P, UPUST_P, WART_NU, WART_BU, WART_VU, UWAGI_POZ, F, UPUST_KW, KOSZT, ZAWARTOSC, ILOSC_MAG, " +
-                "ID_POCHOD, DAKT from POZDOK where ID_DOK=" + id;
+                "ID_POCHOD, DAKT from POZDOK where ID_DOK IN (" + id + ")";
                 fbCommand.Connection = fbConnection;
                 var reader = fbCommand.ExecuteReader();
                 while (reader.Read())
