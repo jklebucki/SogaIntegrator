@@ -40,7 +40,7 @@ namespace SogaIntegratorWebApi.Controllers
             string docTypeQueryParameter = "";
             for (int i = 0; i < docTypeList.Length; i++)
             {
-                docTypeQueryParameter += "'" + docTypeList[i] + "',";
+                docTypeQueryParameter += "'" + docTypeList[i].ToUpper() + "',";
             }
             docTypeQueryParameter = docTypeQueryParameter.TrimEnd(',');
             try
