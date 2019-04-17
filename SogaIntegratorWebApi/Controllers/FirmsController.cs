@@ -95,7 +95,7 @@ namespace SogaIntegratorWebApi.Controllers
                 Formatting = Formatting.Indented,
                 DateFormatString = "yyyy-MM-dd HH:mm:ss"
             };
-            return new JsonResult(list[0], responseJson);
+            return new JsonResult(list, responseJson);
         }
 
     }
