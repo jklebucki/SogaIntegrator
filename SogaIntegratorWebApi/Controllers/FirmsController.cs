@@ -22,16 +22,15 @@ namespace SogaIntegratorWebApi.Controllers
             this.firebaseConfig = firebaseConfig;
         }
 
-        // GET api/values
         [HttpGet]
-        [HttpGet("{id}")]
-        public IActionResult Get(string id)
+        [HttpGet("{ids}")]
+        public IActionResult Get(string ids)
         {
             string connectionString = firebaseConfig.Value.ConnectionString();
 
             FbConnection fbConnection = new FbConnection(connectionString);
             List<Firma> list = new List<Firma>();
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(ids))
             {
                 return BadRequest();
             }
@@ -46,7 +45,7 @@ namespace SogaIntegratorWebApi.Controllers
                 "NIP_FI, TEL_FI, FAX_FI, UWAGI_FI, KONTO, BANK, MAIL_FI, WWW, RR, NR_DOW, WYDAWCA_DOW, ANALITYKA, " +
                 "ID_KR, DEL, DAKT, DATA_INS, ID_UZ_INS, ID_ZR " +
                 "from firmy where " +
-                "ID_FI IN (" + id + ")";
+                "ID_FI IN (" + ids + ")";
                 fbCommand.Connection = fbConnection;
                 var reader = fbCommand.ExecuteReader();
                 while (reader.Read())
@@ -96,7 +95,7 @@ namespace SogaIntegratorWebApi.Controllers
                 Formatting = Formatting.Indented,
                 DateFormatString = "yyyy-MM-dd HH:mm:ss"
             };
-            return new JsonResult(list[0], responseJson);
+            return new JsonResult(list, responseJson);
         }
 
     }

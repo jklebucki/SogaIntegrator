@@ -20,18 +20,21 @@ namespace SogaIntegratorWebApi.Controllers
         {
             this.firebaseConfig = firebaseConfig;
         }
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<List<PTU>> Get(string id)
+
+        [HttpGet("{ids}")]
+        public ActionResult<List<PTU>> Get(string ids)
         {
             string connectionString = firebaseConfig.Value.ConnectionString();
 
             FbConnection fbConnection = new FbConnection(connectionString);
             List<PTU> list = new List<PTU>();
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(ids))
             {
                 return BadRequest();
             }
+
+
+            
             try
             {
                 fbConnection.Open();
@@ -39,7 +42,7 @@ namespace SogaIntegratorWebApi.Controllers
                 FbCommand fbCommand = new FbCommand();
 
                 fbCommand.CommandText =
-                "select ID_LOK, ID_DOK, ID_VAT, VAT_P, WART_N, WART_V, WART_B, DAKT from PTU where ID_DOK=" + id;
+                "select ID_LOK, ID_DOK, ID_VAT, VAT_P, WART_N, WART_V, WART_B, DAKT from PTU where ID_DOK IN (" + ids + ")";
                 fbCommand.Connection = fbConnection;
                 var reader = fbCommand.ExecuteReader();
                 while (reader.Read())
