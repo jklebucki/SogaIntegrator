@@ -51,7 +51,7 @@ namespace SogaIntegratorWebApi.Controllers
 
                 fbCommand.CommandText =
                 "select ID_LOK, ID_DOK, TYP_DOK, ID_KOR, ID_FI, ID_FI_2, DATA_WST, DATA_SPR, DATA_VAT, " +
-                "NR, CALY_NR, CENA_WST, WART_NU, WART_BU, WART_VU, ODB, ID_FO_DOZAP, NR_ORYGIN, STATUS, EURO, " +
+                "NR, CALY_NR, CENA_WST, WART_NU, WART_BU, WART_VU, ODB, ID_FO_DOZAP, NR_ORYGIN, STATUS, 0 AS EURO, " +
                 "DOZAP, UPUST_P, UPUST_KW, KOSZT, ID_MA, ID_KATDOK, ID_POCHOD, TAKSA_KL, UWAGI, ID_UZ, GODZ_WST, " +
                 "DF, PROG, KOMP, VAT_AUTO, FUPR, ID_PV, DAKT, APL, PRZEDPLATA, DETAL, ID_PKOR " +
                 "from dokumenty where " +
@@ -96,7 +96,7 @@ namespace SogaIntegratorWebApi.Controllers
 
                 fbCommand.CommandText =
                 "select ID_LOK, ID_DOK, TYP_DOK, ID_KOR, ID_FI, ID_FI_2, DATA_WST, DATA_SPR, DATA_VAT, " +
-                "NR, CALY_NR, CENA_WST, WART_NU, WART_BU, WART_VU, ODB, ID_FO_DOZAP, NR_ORYGIN, STATUS, EURO, " +
+                "NR, CALY_NR, CENA_WST, WART_NU, WART_BU, WART_VU, ODB, ID_FO_DOZAP, NR_ORYGIN, STATUS, 0 AS EURO, " +
                 "DOZAP, UPUST_P, UPUST_KW, KOSZT, ID_MA, ID_KATDOK, ID_POCHOD, TAKSA_KL, UWAGI, ID_UZ, GODZ_WST, " +
                 "DF, PROG, KOMP, VAT_AUTO, FUPR, ID_PV, DAKT, APL, PRZEDPLATA, DETAL, ID_PKOR " +
                 "from dokumenty where " +
